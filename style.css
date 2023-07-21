@@ -1,0 +1,110 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	color: white;
+	font-family: 'Syne Tactile', cursive;
+	transition: 0.5s all ease ;
+}
+#container{
+	margin-top: 0;
+	background-image:url(./pexels-roberto-nickson-2478248.jpg);
+	background-position:center;
+	background-size:cover;
+	height:100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+h1:hover , p:hover{
+	color:#4D77FF;
+}
+#head::before{
+	content:'';
+	position:absolute;
+	top:0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	backdrop-filter: grayscale(100%);
+}
+#head{
+	height:625px;
+	width:auto;
+	display: grid;
+	grid-template-columns: repeat(6 ,1fr);
+}
+#nav{
+	background-color: #333;
+	display:flex;
+	list-style:none;
+	border-bottom-left-radius:12px;
+	border-bottom-right-radius:12px;
+	z-index:1;
+}
+.lis{
+	padding: 10px;
+}
+#left{
+	grid-column:1/4;
+	grid-row:1/7;
+	display: grid;
+	grid-template-columns: repeat(6 , 1fr);
+	grid-template-rows: repeat(6 , 1fr);
+}
+h1{
+	color: wheat;
+	grid-column:2/6;
+	grid-row:2/3;
+	font-size: 35px;
+	border-bottom: 3px bashed black;
+	position:relative;
+}
+h1:hover #tooltip{
+	opacity: 1;
+	visibility: visible;
+}
+#tooltip{
+	position: absolute;
+	top: -37%;
+	left: -10%;
+	background-color: #4D77FF;
+	font-size: 20px;
+	border-radius: 15px;
+	padding:5px;
+	opacity: 0;
+	visibility: hidden;
+}
+#arow{
+	width:5px;
+	height:5px;
+	border-bottom:5px solid #4D77FF;
+	border-right:5px solid #4D77FF;
+	border-top:5px solid transparent;
+	border-left:5px solid transparent;
+	transform: rotate(45deg);
+	position: absolute;
+	bottom: -4px;
+	right: 14px;
+}
+p{
+	grid-column:2/6;
+	grid-row:3/5;
+	color: wheat;
+}
+button{
+	grid-row: 5/6;
+	grid-column:2/3;
+	color: wheat;
+	align-self:center;
+	border-radius: 8px;
+	padding:5px;
+	border:none ;
+	outline:none ;
+	background-color: #4D77FF;
+	cursor: pointer;
+}
+button:hover{
+	background-color: #1249fd;
+	transform: scale(1.2);
+}
